@@ -24,7 +24,7 @@ const executeCPP = (req, res) => {
           { timeout: 10000, maxBuffer: 50000 }
         ).then((resp) => {
           console.log(resp);
-          exec(`del index.cpp && del $index.txt`).then((resp) =>
+          exec(`del index.cpp && del index.txt`).then((resp) =>
             console.log("Files removed")
           );
           exec(`docker kill ${id}`).then((resp) =>
