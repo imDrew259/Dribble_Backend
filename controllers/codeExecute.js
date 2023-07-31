@@ -8,7 +8,7 @@ const codeExecute = (req, res, next) => {
   const input = req.body.input;
 
   fs.writeFile("index." + lang.toLowerCase(), code, (err) => {
-    if (err) res.json({ err });
+    if (err) res.status(500).json({ err });
     if (lang == "CPP") {
       executeCPP(req, res);
     }
