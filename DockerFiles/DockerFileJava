@@ -1,0 +1,9 @@
+FROM ubuntu
+WORKDIR /usr/src/app
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt install -y openjdk-11-jdk
+
+# DEBIAN_FRONTEND
+#  Setting this environment variable to "noninteractive" will prevent apt from showing interactive
+#  prompts during the installation.
