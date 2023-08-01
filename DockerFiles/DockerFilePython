@@ -1,0 +1,9 @@
+# Use an existing version of Ubuntu
+FROM ubuntu:23.04
+
+WORKDIR /usr/src/app
+
+# Update the package index
+RUN apt-get update
+RUN apt-get install python3 -y
+
